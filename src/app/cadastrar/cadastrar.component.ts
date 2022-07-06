@@ -13,6 +13,7 @@ export class CadastrarComponent implements OnInit {
   usuario: Usuario = new Usuario
   confirmSenha: string
   tipoUsuario: string
+
   constructor(
     private authService: AuthService,
     private router: Router
@@ -26,12 +27,20 @@ export class CadastrarComponent implements OnInit {
     this.confirmSenha = event.target.value
   }
 
+  tipoUser(event: any) {
+    this.tipoUsuario = event.target.value
+  }
+
   cadastrar(){
+
+    this.usuario.tipo = this.tipoUsuario
+
     if(this.usuario.senha != this.confirmSenha) {
       alert('Senhas diferentes!')
     } else {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario)=>{
         this.usuario = resp 
+        this.router.navigate(['/entrar'])
         alert('Úsuário cadastrado com sucesso!!')
       })
     }
