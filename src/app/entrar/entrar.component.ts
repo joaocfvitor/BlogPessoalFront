@@ -25,6 +25,8 @@ export class EntrarComponent implements OnInit {
   entrar() {
     this.authService.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin)=>{
 
+      this.usuarioLogin = resp      
+
       environment.token = this.usuarioLogin.token
       environment.id = this.usuarioLogin.id
       environment.foto = this.usuarioLogin.foto
@@ -35,7 +37,6 @@ export class EntrarComponent implements OnInit {
       console.log(environment.nome)
       console.log(environment.token)
 
-      this.usuarioLogin = resp
       this.router.navigate(['/inicio'])
     }, erro =>{
       if(erro.status == 401) {

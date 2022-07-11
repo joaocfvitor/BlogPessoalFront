@@ -12,5 +12,4 @@ export class AppComponent {
     public authService: AuthService
   ){}
 
-  title = 'BlogPessoalFront';
 }
