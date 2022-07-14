@@ -13,3 +13,7 @@ html {
 .bg-blue {
     background-color: cornflowerblue;
 }
+
+.fs-8 {
+    font-size: 8pt;
+}
