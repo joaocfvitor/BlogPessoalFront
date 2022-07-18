@@ -51,7 +51,7 @@
         <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab">
 
-            <div class="card mt-3 mb-3" *ngFor='let item of listaPostagens'>
+            <div class="card mt-3 mb-3" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
 
                 <div class="card-header">
 
@@ -90,7 +90,7 @@
 
         <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
 
-            <div class="card mt-3 mb-3" *ngFor='let item of usuario.postagem'>
+            <div class="card mt-3 mb-3" *ngFor='let item of usuario.postagem | orderBy : key : reverse'>
 
                 <div class="card-header">
 
@@ -142,7 +142,7 @@
 
         <div class="tab-pane fade" id="postagensTema" role="tabpanel" aria-labelledby="nav-postagensTema-tab">
 
-            <div class="card mt-3 mb-3" *ngFor='let item of tema.postagem'>
+            <div class="card mt-3 mb-3" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
 
                 <div class="card-header">
 
