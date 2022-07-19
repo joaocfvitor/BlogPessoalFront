@@ -1,5 +1,5 @@
 #img-bg {
-    background-image: url('https://i.imgur.com/5PXomTA.gif');
+    background-image: url('https://i.imgur.com/Hh2d7l4.jpg');
     min-height: 695px;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,4 +10,22 @@
     background-image: url('https://i.imgur.com/IRF3AT3.gif');
     background-repeat: no-repeat;
     
+}
+
+#img-bg3 {
+    background-image: url('../../assets/visionary-technology-animate.svg');
+    background-repeat: no-repeat;
+}
+
+#img-bg4 {
+    background-color: black;
+    opacity: 80%;
+    background-repeat: no-repeat;
+    
+}
+
+.bg-gradiente-blue {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 47%, rgba(0, 18, 255, 1) 100%);
+    opacity: 90%;
 }
